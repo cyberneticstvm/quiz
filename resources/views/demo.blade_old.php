@@ -12,7 +12,7 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'>
     
 	<!-- Demo CSS -->
-	<link rel="stylesheet" href="{{ public_path().'/form-wizard/css/style.css' }}">
+	<link rel="stylesheet" href="{{ public_path().'/form-wizard/css/demo.css' }}">
   
   </head>
   <body>
@@ -79,7 +79,7 @@
 <!-- Bootstrap 5 JS -->
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js'></script>
 <!-- Multi-step Form JS -->
-<script src="{{ public_path().'/form-wizard/js/bootstrap-multi-step-form.js' }}"></script>
+<script src="{{ public_path().'/form-wizard/js/demo.js' }}"></script>
   
   </body>
 </html>
