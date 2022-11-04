@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Quiz;
+use Mail;
 use DB;
 
 class QuizController extends Controller
@@ -13,6 +14,12 @@ class QuizController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    private $settings;
+
+    public function __construct(){        
+        $this->settings = DB::table('settings')->first();
+    }
+
     public function index()
     {
         $questions = DB::table('questions')->get();
@@ -66,10 +73,15 @@ class QuizController extends Controller
             $input['outcome'] =  array_search(max($outcome), $outcome);
             $insert = Quiz::create($input);
             $quiz = Quiz::find($insert->id);
-            return redirect()->route('quiz.thankyou')->with(['quiz' => $quiz]);
+            Mail::send('email.acknowledgement', ['qid' => $quiz->id, 'first_name' => $request->first_name], function($message) use($request){
+                $message->to($request->email);
+                $message->cc($this->settings->admin_email);
+                $message->subject('Life Style Design Quiz Report');
+            });            
         }catch(Exception $e){
             throw $e;
-        }        
+        }
+        return redirect()->route('quiz.thankyou')->with(['quiz' => $quiz]);        
     }
 
     /**
