@@ -111,11 +111,6 @@ class QuizController extends Controller
                     data: [".$quiz->c_per.", ".$quiz->i_per.", ".$quiz->o_per.", ".$quiz->v_per.", ".$quiz->a_per."],
                     backgroundColor: 'rgb(220, 118, 51)'
                 }]
-            },
-            scales: {
-                y: {
-                    max: 100
-                }
             }
         }";
         $pdf = PDF::loadView('report', ['quiz' => $quiz, 'chart' => $chart]);
