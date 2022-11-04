@@ -101,8 +101,18 @@ class QuizController extends Controller
      */
     public function report($id)
     {
-        $quiz = Quiz::find($id);
-        $pdf = PDF::loadView('report', ['quiz' => $quiz]);    
+        $quiz = Quiz::find($id);    
+        $chart = "{
+            type: 'bar',
+            data: {
+             labels: [2012, 2013, 2014, 2015, 2016],
+             datasets: [{
+                label: 'Raisins', data: [12, 6, 5, 18, 12]}, {
+                label: 'Bananas', data: [4, 8, 16, 5, 5]
+             }]
+            }
+        }";
+        $pdf = PDF::loadView('report', ['quiz' => $quiz, 'chart' => $chart]);
         return $pdf->stream('report.pdf', array("Attachment"=>0));
     }
 
