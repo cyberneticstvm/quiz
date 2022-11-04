@@ -69,6 +69,13 @@ class QuizController extends Controller
                     endforeach;
                 endif;
             endforeach;
+            $sum = array_sum($category);
+            $input['c_per'] = ($category['C'] > 0) ? (100/$sum)*$category['C'] : 0;
+            $input['i_per'] = ($category['I'] > 0) ? (100/$sum)*$category['I'] : 0;
+            $input['o_per'] = ($category['O'] > 0) ? (100/$sum)*$category['O'] : 0;
+            $input['v_per'] = ($category['V'] > 0) ? (100/$sum)*$category['V'] : 0;
+            $input['a_per'] = ($category['A'] > 0) ? (100/$sum)*$category['A'] : 0;
+
             $input['category'] = array_search(max($category), $category);
             $input['outcome'] =  array_search(max($outcome), $outcome);
             $insert = Quiz::create($input);
