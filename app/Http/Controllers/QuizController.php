@@ -105,11 +105,10 @@ class QuizController extends Controller
         $chart = "{
             type: 'bar',
             data: {
-             labels: [2012, 2013, 2014, 2015, 2016],
-             datasets: [{
-                label: 'Raisins', data: [12, 6, 5, 18, 12]}, {
-                label: 'Bananas', data: [4, 8, 16, 5, 5]
-             }]
+                labels: ['Compassion', 'Innovation', 'Optimism', 'Vision', 'Diligence'],
+                datasets: [{
+                    label: 'Compassion', data: [25]
+                }]
             }
         }";
         $pdf = PDF::loadView('report', ['quiz' => $quiz, 'chart' => $chart]);
