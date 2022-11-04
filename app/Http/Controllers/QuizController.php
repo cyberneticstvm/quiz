@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Quiz;
+use QrCode;
+use PDF;
 use Mail;
 use DB;
 
@@ -70,11 +72,11 @@ class QuizController extends Controller
                 endif;
             endforeach;
             $sum = array_sum($category);
-            $input['c_per'] = ($category['C'] > 0) ? floor((100/$sum)*$category['C']) : 0;
-            $input['i_per'] = ($category['I'] > 0) ? floor((100/$sum)*$category['I']) : 0;
-            $input['o_per'] = ($category['O'] > 0) ? floor((100/$sum)*$category['O']) : 0;
-            $input['v_per'] = ($category['V'] > 0) ? floor((100/$sum)*$category['V']) : 0;
-            $input['a_per'] = ($category['A'] > 0) ? floor((100/$sum)*$category['A']) : 0;
+            $input['c_per'] = ($category['C'] > 0) ? ceil((100/$sum)*$category['C']) : 0;
+            $input['i_per'] = ($category['I'] > 0) ? ceil((100/$sum)*$category['I']) : 0;
+            $input['o_per'] = ($category['O'] > 0) ? ceil((100/$sum)*$category['O']) : 0;
+            $input['v_per'] = ($category['V'] > 0) ? ceil((100/$sum)*$category['V']) : 0;
+            $input['a_per'] = ($category['A'] > 0) ? ceil((100/$sum)*$category['A']) : 0;
 
             $input['category'] = array_search(max($category), $category);
             $input['outcome'] =  array_search(max($outcome), $outcome);
@@ -97,9 +99,11 @@ class QuizController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function report($id)
     {
-        //
+        $quiz = Quiz::find($id);
+        $pdf = PDF::loadView('report', ['quiz' => $quiz]);    
+        return $pdf->stream('report.pdf', array("Attachment"=>0));
     }
 
     /**

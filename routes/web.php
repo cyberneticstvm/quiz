@@ -19,3 +19,5 @@ Route::post('/', [QuizController::class, 'store'])->name('quiz.save');
 Route::get('/thankyou/', function () {
     return view('thankyou');
 })->name('quiz.thankyou');
+
+Route::get('/quiz/report/{id}/', [QuizController::class, 'report'])->name('quiz.report');
