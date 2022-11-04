@@ -108,7 +108,8 @@ class QuizController extends Controller
                 labels: ['Compassion', 'Innovation', 'Optimism', 'Vision', 'Diligence'],
                 datasets: [{
                     label: 'Your Profile Breakdown', 
-                    data: [".$quiz->c_per.", ".$quiz->i_per.", ".$quiz->o_per.", ".$quiz->v_per.", ".$quiz->a_per."]
+                    data: [".$quiz->c_per.", ".$quiz->i_per.", ".$quiz->o_per.", ".$quiz->v_per.", ".$quiz->a_per."],
+                    backgroundColor: getGradientFillHelper('vertical', ['#36a2eb', '#a336eb', '#eb3639'])
                 }]
             }
         }";
