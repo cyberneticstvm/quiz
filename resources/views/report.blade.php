@@ -1,1 +1,1 @@
-<img src="https://quickchart.io/chart?width=250&height=150&c={{ urlencode($chart) }}"/>
+<img src="https://quickchart.io/chart?width=350&height=150&c={{ urlencode($chart) }}"/>
