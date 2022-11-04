@@ -104,6 +104,7 @@ class QuizController extends Controller
         $quiz = Quiz::find($id);    
         $chart = "{
             type: 'bar',
+            barPercentage: 0.4,
             data: {
                 labels: ['Compassion', 'Innovation', 'Optimism', 'Vision', 'Diligence'],
                 datasets: [{
