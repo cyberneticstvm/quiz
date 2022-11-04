@@ -107,9 +107,8 @@ class QuizController extends Controller
             data: {
                 labels: ['Compassion', 'Innovation', 'Optimism', 'Vision', 'Diligence'],
                 datasets: [{
-                    label: 'Compassion', data: [25]
-                }, {
-                    label: 'Innovation', data: [15]
+                    label: 'Your Profile Breakdown', 
+                    data: [".$quiz->c_per.", ".$quiz->i_per.", ".$quiz->o_per.", ".$quiz->v_per.", ".$quiz->a_per."]
                 }]
             }
         }";
