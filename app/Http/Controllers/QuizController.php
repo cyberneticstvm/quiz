@@ -107,7 +107,8 @@ class QuizController extends Controller
             data: {
                 labels: ['Compassion', 'Innovation', 'Optimism', 'Vision', 'Diligence'],
                 datasets: [{
-                    label: 'Compassion', data: [25],
+                    label: 'Compassion', data: [25]
+                }, {
                     label: 'Innovation', data: [15]
                 }]
             }
