@@ -109,7 +109,7 @@ class QuizController extends Controller
                 datasets: [{
                     label: 'Your Profile Breakdown', 
                     data: [".$quiz->c_per.", ".$quiz->i_per.", ".$quiz->o_per.", ".$quiz->v_per.", ".$quiz->a_per."],
-                    backgroundColor: '#DC7633'
+                    backgroundColor: '%23DC7633'
                 }]
             }
         }";
