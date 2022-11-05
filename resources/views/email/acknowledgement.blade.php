@@ -1,4 +1,5 @@
-Dear {{ $first_name }},<br>
+<h3>Message from Andrew</h3>
+Dear {{ $first_name }},<br><br>
 Thank you for making an investment in your future by taking the Lifestyle Design Quiz<br>
 The following pages are your personalised report, specifically designed to help you get a deeper understanding of yourself and clarity on how to take smart-steps right away, to clear the fog and move yourself closer toward that Maximised Life that you have dreamed about.<br><br>
 
@@ -11,6 +12,8 @@ And finally, as promised, this report includes a full outline of the proven, 5-s
 So, thank you for being one of the ‘doers’, the ones willing to take positive steps for change. Welcome to our growing community!<br><br>
 
 Now, let’s see what the results show!<br><br>
+
+<center><a href="https://quiz.cybernetics.me/quiz/report/{{$qid}}/" target="_blank">Download your Report</a></center>
 
 Kind regards,<br>
 Andrew
