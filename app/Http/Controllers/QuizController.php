@@ -83,7 +83,12 @@ class QuizController extends Controller
             $insert = Quiz::create($input);
             $quiz = Quiz::find($insert->id);
             Mail::send('email.acknowledgement', ['qid' => $quiz->id, 'first_name' => $request->first_name], function($message) use($request){
-                $message->to($this->settings->admin_email, $this->settings->admin_name)->subject('Life Style Design Quiz Report')->from($this->settings->admin_email, $this->settings->admin_name)->cc($request->email, $request->first_name)->replyTo($this->settings->admin_email, $this->settings->admin_name)->priority(2);                
+                $message->to($request->email, $request->first_name);
+                $message->from($this->settings->admin_email, $this->settings->admin_name);
+                $message->cc($this->settings->admin_email, $this->settings->admin_name);
+                $message->replyTo($this->settings->admin_email, $this->settings->admin_name);
+                $message->subject('Life Style Design Quiz - Report');                
+                //$message->priority(2);                
             });            
         }catch(Exception $e){
             throw $e;
