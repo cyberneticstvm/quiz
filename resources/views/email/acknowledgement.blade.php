@@ -1,6 +1,6 @@
 <h3>Message from Andrew</h3>
 Dear {{ $first_name }},<br><br>
-Thank you for making an investment in your future by taking the Lifestyle Design Quiz<br>
+Thank you for making an investment in your future by taking the Lifestyle Design Quiz<br><br>
 The following pages are your personalised report, specifically designed to help you get a deeper understanding of yourself and clarity on how to take smart-steps right away, to clear the fog and move yourself closer toward that Maximised Life that you have dreamed about.<br><br>
 
 The Strength Profile and the Clarity Questions will give you some insights on how you bring your best self to the table for greater impact in any lifestyle domain.<br><br>
