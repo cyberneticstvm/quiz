@@ -30,9 +30,6 @@ class AcknowledgementMail extends Mailable
      *
      * @return \Illuminate\Mail\Mailables\Envelope
      */
-    public function build(){
-        return $this->subject('Report Quiz')->view('email.acknowledgement');
-    }
 
     public function envelope()
     {

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Quiz;
-use App\Mail\AcknowledgementMail;
 use QrCode;
 use PDF;
 use Mail;
@@ -46,11 +45,17 @@ class QuizController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function testmail(){
-        $mailData = ['qid' => 1, 'first_name' => 'Vijoy Sasidharan'];
-         
-        Mail::to('vijoysniit@gmail.com')->send(new AcknowledgementMail($mailData));
-           
-        dd("Email is sent successfully.");
+        $request = [];
+        $data = array('qid' => 1, 'first_name' => 'Vijoy Sasidharan');
+        Mail::send('email.acknowledgement', $data, function($message) use($request){
+            $message->to('vijoysniit@gmail.com', 'Vijoy Sasidharan');
+            //$message->from($this->settings->admin_email, $this->settings->admin_name);
+            //$message->cc($this->settings->admin_email, $this->settings->admin_name);
+            //$message->replyTo($this->settings->admin_email, $this->settings->admin_name);
+            $message->subject('Life Style Design Quiz - Report');                
+            //$message->priority(2);                
+        });
+        echo "success";
     }
     public function store(Request $request)
     {
