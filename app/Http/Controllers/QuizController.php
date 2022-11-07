@@ -82,7 +82,8 @@ class QuizController extends Controller
             $input['outcome'] =  array_search(max($outcome), $outcome);
             $insert = Quiz::create($input);
             $quiz = Quiz::find($insert->id);
-            Mail::send('email.acknowledgement', ['qid' => $quiz->id], function($message) use($request){
+            $data = array('qid' => $quiz->id, 'first_name' => $request->first_name);
+            Mail::send('email.acknowledgement', $data, function($message) use($request){
                 $message->to($request->email, $request->first_name);
                 $message->from($this->settings->admin_email, $this->settings->admin_name);
                 $message->cc($this->settings->admin_email, $this->settings->admin_name);
