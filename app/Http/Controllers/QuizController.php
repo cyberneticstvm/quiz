@@ -45,7 +45,7 @@ class QuizController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function testmail(){
-        $mailData = array('qid' => $quiz->id, 'first_name' => $request->first_name);
+        $mailData = array('qid' => 1, 'first_name' => 'Vijoy Sasidharan');
          
         Mail::to('vijoysniit@gmail.com')->send(new AcknowledgementMail($mailData));
            
