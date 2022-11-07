@@ -45,17 +45,11 @@ class QuizController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function testmail(){
-        $request = [];
-        $data = array('qid' => 1, 'first_name' => 'Vijoy Sasidharan');
-        Mail::send('email.acknowledgement', $data, function($message) use($request){
-            $message->to('vijoysniit@gmail.com');
-            //$message->from($this->settings->admin_email, $this->settings->admin_name);
-            //$message->cc($this->settings->admin_email, $this->settings->admin_name);
-            //$message->replyTo($this->settings->admin_email, $this->settings->admin_name);
-            $message->subject('Life Style Design Quiz - Report');                
-            //$message->priority(2);                
-        });
-        echo "success";
+        $mailData = array('qid' => $quiz->id, 'first_name' => $request->first_name);
+         
+        Mail::to('vijoysniit@gmail.com')->send(new AcknowledgementMail($mailData));
+           
+        dd("Email is sent successfully.");
     }
     public function store(Request $request)
     {
