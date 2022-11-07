@@ -14,6 +14,7 @@ use App\Http\Controllers\QuizController;
 |
 */
 
+Route::get('/testmail/', [QuizController::class, 'testmail'])->name('quiz.testmail');
 Route::get('/', [QuizController::class, 'index'])->name('quiz');
 Route::post('/', [QuizController::class, 'store'])->name('quiz.save');
 Route::get('/thankyou/', function () {

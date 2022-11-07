@@ -44,6 +44,18 @@ class QuizController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function testmail(){
+        $data = array('qid' => 1, 'first_name' => 'Vijoy Sasidharan');
+        Mail::send('email.acknowledgement', $data, function($message) use($request){
+            $message->to('vijoysniit@gmail.com', 'Vijoy Sasidharan');
+            $message->from($this->settings->admin_email, $this->settings->admin_name);
+            $message->cc($this->settings->admin_email, $this->settings->admin_name);
+            $message->replyTo($this->settings->admin_email, $this->settings->admin_name);
+            $message->subject('Life Style Design Quiz - Report');                
+            //$message->priority(2);                
+        });
+        echo "success";
+    }
     public function store(Request $request)
     {
         $this->validate($request, [
