@@ -48,7 +48,7 @@ class QuizController extends Controller
         $request = [];
         $data = array('qid' => 1, 'first_name' => 'Vijoy Sasidharan');
         Mail::send('email.acknowledgement', $data, function($message) use($request){
-            $message->to('mail@cybernetics.me', 'Cybernetics');
+            $message->to('cybernetics.me@outlook.com', 'Cybernetics');
             //$message->from($this->settings->admin_email, $this->settings->admin_name);
             //$message->cc($this->settings->admin_email, $this->settings->admin_name);
             //$message->replyTo($this->settings->admin_email, $this->settings->admin_name);
