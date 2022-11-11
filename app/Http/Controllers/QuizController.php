@@ -49,9 +49,9 @@ class QuizController extends Controller
         $data = array('qid' => 1, 'first_name' => 'Vijoy Sasidharan');
         Mail::send('email.acknowledgement', $data, function($message) use($request){
             $message->to('vijoysasidharan@yahoo.com', 'Vijoy Sasidharan');
-            //$message->from($this->settings->admin_email, $this->settings->admin_name);
-            //$message->cc($this->settings->admin_email, $this->settings->admin_name);
-            //$message->replyTo($this->settings->admin_email, $this->settings->admin_name);
+            $message->from($this->settings->admin_email, $this->settings->admin_name);
+            $message->cc($this->settings->admin_email, $this->settings->admin_name);
+            $message->replyTo($this->settings->admin_email, $this->settings->admin_name);
             $message->subject('Life Style Design Quiz - Report');                
             //$message->priority(2);                
         });
