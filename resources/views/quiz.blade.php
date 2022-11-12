@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Life Style Design quiz</title>
-    
+    <link rel="icon" type="image/x-icon" href="{{ public_path().'/assets/images/favicon.png' }}">
     <!-- Bootstrap 5 CSS -->  
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css'>
     <!-- Font Awesome 5 -->
@@ -33,6 +33,27 @@
             <div class="card-body p-5 step" style="{{ ($key != 0) ? 'display: none' : '' }}" id="{{ $question->qcode }}" data-number="{{ $question->id }}" data-input="{{ $question->input }}">
             <h3>{{ $question->header }}</h3>
             <p>{{ $key+1 }}. {{ $question->question }}</p>
+            @if($key == 1)
+              <div class="row">
+                  <div class="col-sm-3"></div>
+                  <div class="col-sm-1">
+                      <img src="{{ public_path().'/assets/images/heart.png' }}" class="img-fluid border border-info rounded-circle"  />
+                  </div>
+                  <div class="col-sm-1">
+                      <img src="{{ public_path().'/assets/images/bulb.png' }}" class="img-fluid border border-info rounded-circle" />
+                  </div>
+                  <div class="col-sm-1">
+                      <img src="{{ public_path().'/assets/images/sun.png' }}" class="img-fluid border border-info rounded-circle" />
+                  </div>
+                  <div class="col-sm-1">
+                      <img src="{{ public_path().'/assets/images/explore.png' }}" class="img-fluid border border-info rounded-circle" />
+                  </div>
+                  <div class="col-sm-1">
+                      <img src="{{ public_path().'/assets/images/hand.png' }}" class="img-fluid border border-info rounded-circle" />
+                  </div>
+                  <div class="col-sm-4"></div>
+              </div>
+            @endif
             @php $options = DB::table('options')->where('qid', $question->id)->get(); @endphp
                 @forelse($options as $key1 => $option)
                 <div class="form-check">

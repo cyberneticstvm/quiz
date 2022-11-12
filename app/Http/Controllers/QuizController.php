@@ -107,7 +107,8 @@ class QuizController extends Controller
         }catch(Exception $e){
             throw $e;
         }
-        return redirect()->route('quiz.thankyou')->with(['quiz' => $quiz]);        
+        $strength = DB::table('strength')->where('category', $quiz->category)->first();
+        return redirect()->route('quiz.thankyou')->with(['quiz' => $quiz, 'strength' => $strength]);        
     }
 
     /**
