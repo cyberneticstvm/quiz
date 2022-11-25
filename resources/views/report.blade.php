@@ -45,7 +45,7 @@
         margin-bottom: -3%;
     }
     .desc1{
-        height: 58%;
+        height: 57%;
         margin-bottom: -2%;
     }
     .table{
