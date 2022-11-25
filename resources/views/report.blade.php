@@ -101,6 +101,10 @@
         <div class="page">
             <p>Does that sound right? Or is there something else?</p>
             <p>Perhaps it is a combination of more than one?</p>
+
+            <div class="text-center">
+                <div style="background-color: #00305B; color: #fff"><a href="">BOOK YOUR DISCOVERY CALL</a></div>
+            </div>
         </div>
     </div>
 </div>
