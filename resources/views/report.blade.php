@@ -49,10 +49,10 @@
         width: 90%;
     }
     .td{
-        border-radius: 5%;
+        border-radius: 10%;
         text-align: center;
         color: #000;
-        padding: 10px 0 10px 0;
+        padding: 20px 0 20px 0;
         background-color: #D3D3D3;
         font-family: 'text';
     }
