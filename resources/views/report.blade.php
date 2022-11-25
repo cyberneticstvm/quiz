@@ -41,8 +41,8 @@
         page-break-after: always;
     }
     .desc{
-        height: 35%;
-        margin-bottom: -7%;
+        height: 37%;
+        margin-bottom: -2%;
     }
   </style>
 </head>
