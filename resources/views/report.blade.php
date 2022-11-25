@@ -31,6 +31,7 @@
     }
     .head p{        
         font-weight: bold;
+        font-family: 'text';
     }
     .br{
         page-break-after: always;
@@ -42,18 +43,18 @@
 <img src="./assets/images/thankyou.jpg" class="img-fluid"/> 
 <div class="container-fluid">
     <div class="row">
-        <div class="col page">
+        <div class="col">
             <div class='head'><p>YOUR STRENGTH PROFILE</p></div>
-            <div class="mb-3">Based on your responses in the quiz, your Strength Profile is:</div>
+            <div class="mb-3 page"><p>Based on your responses in the quiz, your Strength Profile is:</p></div>
             <div class="text-center">
                 <div class="head"><p class="text-center" style="background-color: {{ $strength->bg_color }}; width: 30%; margin: 0 auto; border-radius: 25px; padding: 10px; color: #fff; ">{{ $strength->outcome }}</p></div>
             </div>
-            <p class="desc">{!! $strength->description !!}</p>
+            <div class="page"><p class="desc">{!! $strength->description !!}</p></div>
         </div>
     </div>
     <div class="br"></div>
     <div class="row">
-        <div class="col page">
+        <div class="col">
             <div class="head"><p class='head'>YOUR PROFILE BREAKDOWN</p></div>
             <img src="https://quickchart.io/chart?width=350&height=150&c={{ urlencode($chart) }}"/>
         </div>
