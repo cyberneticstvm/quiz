@@ -65,7 +65,7 @@
         font-family: 'text';
         width: 60%;
         margin-top: 7%;
-        margin-left: 20%;
+        margin-left: 17%;
     }
     .call a{
         text-decoration: none;
@@ -118,7 +118,7 @@
         <div class="page">
             <p>Does that sound right? Or is there something else?</p>
             <p>Perhaps it is a combination of more than one?</p>
-            <div class="call"><a href="https://google.com" target="_blank">BOOK YOUR DISCOVERY CALL</a></div>
+            <div class="call"><a href="https://www.blueprintlifecoaching.com.au/coaching/let-s-talk" target="_blank">BOOK YOUR DISCOVERY CALL</a></div>
         </div>
     </div>
 </div>
