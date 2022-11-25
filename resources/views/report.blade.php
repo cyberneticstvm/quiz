@@ -64,8 +64,9 @@
     <div class="br"></div>
     <div class="row">
         <div class="col page">
-        <div class='head'>YOUR PROFILE BREAKDOWN</div>
+            <div class='head'>YOUR PROFILE BREAKDOWN</div>
             <img src="https://quickchart.io/chart?width=350&height=150&c={{ urlencode($chart) }}"/>
+            <div class='head mt-3'>YOUR FOCUS FOR GROWTH</div>
         </div>
     </div>
 </div>
