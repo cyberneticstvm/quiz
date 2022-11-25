@@ -44,7 +44,7 @@
         height: 36%;
         margin-bottom: -3%;
     }
-    .tbl{
+    .table{
         margin: 0 5%;
         width: 90%;
     }
@@ -84,7 +84,8 @@
                     <td class="head" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</td><td>&nbsp;</td>
                     <td class="head" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</td>
                 </tr>
-                <tr class="mt-3">
+                <tr><td colspan="3">&nbsp;</td></tr>
+                <tr>
                     <td class="head" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</td><td>&nbsp;</td>
                     <td class="head" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</td>
                 </tr>
