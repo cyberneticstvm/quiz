@@ -49,9 +49,9 @@
         width: 90%;
     }
     .td{
-        border-radius: 25px;
+        border-radius: 2%px;
         text-align: center;
-        color: #fff;
+        color: #000;
         padding: 2% 0;
         background-color: #D3D3D3;
         font-family: 'text';
