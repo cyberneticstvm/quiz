@@ -61,8 +61,14 @@
         text-align: center;
         color: #fff;
         padding: 20px 0 20px 0;
-        background-color: #D3D3D3;
+        background-color: #0070C0;
         font-family: 'text';
+        width: 90%;
+    }
+    .call a{
+        text-decoration: none;
+        cursor: pointer;
+        color: #fff;
     }
   </style>
 </head>
@@ -109,7 +115,7 @@
         <div class="page">
             <p>Does that sound right? Or is there something else?</p>
             <p>Perhaps it is a combination of more than one?</p>
-            <div class="call"><a href="">BOOK YOUR DISCOVERY CALL</a></div>
+            <div class="call"><a href="https://google.com" target="_blank">BOOK YOUR DISCOVERY CALL</a></div>
         </div>
     </div>
 </div>
