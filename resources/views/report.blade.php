@@ -44,6 +44,9 @@
         height: 36%;
         margin-bottom: -3%;
     }
+    .tbl{
+        margin: 0 5%;
+    }
   </style>
 </head>
 <body>
@@ -74,18 +77,18 @@
     </div>
     <div class="row page"><p>Based on your quiz responses, the area that matters most to you right now is…</p></div>
     <div class="row">
-        <div class="col">
+        <div class="col tbl">
             <table class="table">
                 <tr>
+                    <td class="head" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</td><td>&nbsp;</td>
                     <td class="head" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</td>
+                </tr>
+                <tr>
+                    <td class="head" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</td><td>&nbsp;</td>
                     <td class="head" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</td>
                 </tr>
             </table>
         </div>
-    </div>
-    <div class="row">
-        <div class="head col-md-6" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
-        <div class="head col-md-6" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
     </div>
 </div>
 </body>
