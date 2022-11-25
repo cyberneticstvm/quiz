@@ -53,6 +53,7 @@
         text-align: center;
         color: #fff;
         padding: 2% 0;
+        background-color: gray;
     }
   </style>
 </head>
@@ -87,13 +88,13 @@
         <div class="col tbl">
             <table class="table">
                 <tr>
-                    <td class="head td" style="background-color: {{ $strength->bg_color }};">{{ $strength->outcome }}</td><td>&nbsp;</td>
-                    <td class="head td" style="background-color: {{ $strength->bg_color }};">{{ $strength->outcome }}</td>
+                    <td class="head td">{{ $strength->outcome }}</td><td>&nbsp;</td>
+                    <td class="head td">{{ $strength->outcome }}</td>
                 </tr>
                 <tr><td colspan="3">&nbsp;</td></tr>
                 <tr>
-                    <td class="head td" style="background-color: {{ $strength->bg_color }};">{{ $strength->outcome }}</td><td>&nbsp;</td>
-                    <td class="head td" style="background-color: {{ $strength->bg_color }};">{{ $strength->outcome }}</td>
+                    <td class="head td">{{ $strength->outcome }}</td><td>&nbsp;</td>
+                    <td class="head td">{{ $strength->outcome }}</td>
                 </tr>
             </table>
         </div>
