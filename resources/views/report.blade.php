@@ -22,7 +22,7 @@
     }
     .page{
         margin: 5%;
-        font-family: text;
+        font-family: 'text';
     }
     .page p{
         width: 90%;
@@ -30,7 +30,7 @@
         font-size: 1.2rem;
     }
     .head{
-        font-family: text;
+        font-family: 'text';
     }
     .br{
         page-break-after: always;
