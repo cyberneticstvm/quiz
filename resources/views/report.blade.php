@@ -121,6 +121,13 @@
             <div class="call"><a href="https://www.blueprintlifecoaching.com.au/coaching/let-s-talk" target="_blank">BOOK YOUR DISCOVERY CALL</a></div>
         </div>
     </div>
+    <div class="br"></div>
+    <div class="row">
+        <div class="col page">
+            <div class='head'>CLARITY QUESTIONS</div>
+            <p>Get deeper clarity on what your signature strength means to you and how you can apply it to reach your goals…</p>                  
+        </div>
+    </div>
 </div>
 </body>
 </html>
