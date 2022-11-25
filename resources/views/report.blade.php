@@ -48,6 +48,11 @@
         margin: 0 5%;
         width: 90%;
     }
+    .td{
+        border-radius: 25px;
+        text-align: center;
+        color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -81,13 +86,13 @@
         <div class="col tbl">
             <table class="table">
                 <tr>
-                    <td class="head" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</td><td>&nbsp;</td>
-                    <td class="head" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</td>
+                    <td class="head td" style="background-color: {{ $strength->bg_color }};">{{ $strength->outcome }}</td><td>&nbsp;</td>
+                    <td class="head td" style="background-color: {{ $strength->bg_color }};">{{ $strength->outcome }}</td>
                 </tr>
                 <tr><td colspan="3">&nbsp;</td></tr>
                 <tr>
-                    <td class="head" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</td><td>&nbsp;</td>
-                    <td class="head" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</td>
+                    <td class="head td" style="background-color: {{ $strength->bg_color }};">{{ $strength->outcome }}</td><td>&nbsp;</td>
+                    <td class="head td" style="background-color: {{ $strength->bg_color }};">{{ $strength->outcome }}</td>
                 </tr>
             </table>
         </div>
