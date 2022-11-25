@@ -11,6 +11,10 @@
         font-family: 'text';
         src: url("{{ storage_path('/fonts/Raleway-Light.ttf') }}") format("truetype");
     }
+    @font-face {
+        font-family: 'text-bold';
+        src: url("{{ storage_path('/fonts/Raleway-Bold.ttf') }}") format("truetype");
+    }
     @page {
         margin:0px;
     }
@@ -25,7 +29,7 @@
         font-family: text;
     }
     .head{
-        font-family: text;
+        font-family: 'text-bold';
         font-size: 1.5rem;
     }
     .page p{
