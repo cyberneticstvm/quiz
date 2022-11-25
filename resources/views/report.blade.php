@@ -128,7 +128,7 @@
     <div class="row">
         <div class="col page">
             <div class='head'>CLARITY QUESTIONS</div>
-            <p>Get deeper clarity on what your signature strength means to you and how you can apply it to reach your goals…</p>
+            Get deeper clarity on what your signature strength means to you and how you can apply it to reach your goals…<br>
             <ul>
                 @forelse($questions as $key => $question)
                 <li>{!! $question->question !!}</li>
