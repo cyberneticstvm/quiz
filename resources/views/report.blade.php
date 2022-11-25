@@ -161,6 +161,17 @@
             <div class='head'>MEET ANDREW</div>
             <p>Hey there,</p>
             <p>Thanks for taking the quiz. I trust this report has helped you.</p>
+            <p>The reason you’re here is because the traditional way of doing things has let you down – whether that be education, lifestyle or trying to make a positive difference – the old way hasn’t worked.</p>
+            <p>That’s because you’ve been sold a lie.</p>
+            <p>You were told that if you studied hard, worked hard, and followed the status quo – then everything would turn out fine. You would be happy.</p>
+            <p>Trouble is, YOU weren’t born to be ordinary.</p>
+            <p>You were born to play a bigger game.</p>
+            <p>You <strong>cannot</strong> create happy, effective education, family life, work or business (or any worthwhile pursuit) unless you understand WHY you’re doing it. Your WHY come from WHO you are – on the inside – the deepest part of you.</p>
+            <p>This doesn’t come from following top-down, A-B-C instructions – it requires a personalised, strengths-based approach. It takes coaching.</p>
+            <p>I’m a maverick educator, turned lifestyle design coach.</p>
+            <p>I help people redesign their lives so they can learn, live and lead better – with passion and purpose. </p>
+            <p>I want to help you too.</p>
+            <div class="call"><a href="https://www.blueprintlifecoaching.com.au/coaching/let-s-talk" target="_blank">BOOK YOUR DISCOVERY CALL</a></div>
         </div>
     </div>
 </div>
