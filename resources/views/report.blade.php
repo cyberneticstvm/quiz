@@ -24,13 +24,18 @@
         background-repeat: no-repeat;
         height: 100%;
     }
+    .cover{
+        background: url("./assets/images/profile.jpg");
+        background-repeat: no-repeat;
+        height: 100%;
+    }
     .page{
         margin: 5%;
         font-family: text;
     }
     .head{
         font-family: 'text-bold';
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     .page p{
         width: 90%;
@@ -55,6 +60,7 @@
             </div>
             <p class="desc">{!! $strength->description !!}</p>
         </div>
+        <div class="profile"></div>
     </div>
     <div class="br"></div>
     <div class="row">
