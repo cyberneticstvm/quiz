@@ -29,9 +29,9 @@
         text-align: justify;
         font-size: 1.2rem;
     }
-    .head p{
-        font-family: 'text';
+    .head p{        
         font-weight: bold;
+        font-family: 'text';
     }
     .br{
         page-break-after: always;
