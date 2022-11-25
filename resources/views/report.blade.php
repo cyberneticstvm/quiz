@@ -40,6 +40,9 @@
     .br{
         page-break-after: always;
     }
+    .desc{
+        height: 30%;
+    }
   </style>
 </head>
 <body>
@@ -53,7 +56,7 @@
             <div class="text-center">
                 <div class="head" style="background-color: {{ $strength->bg_color }}; width: 30%; margin: 0 auto; border-radius: 25px; padding: 10px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
             </div>
-            <p class="desc">{!! $strength->description !!}</p>
+            <div class="desc"><p>{!! $strength->description !!}</p></div>
         </div>
         <div class="profile"><img src="./assets/images/profile.jpg" class="img-fluid"/></div>
     </div>
