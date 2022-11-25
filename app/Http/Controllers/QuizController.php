@@ -96,14 +96,14 @@ class QuizController extends Controller
             $insert = Quiz::create($input);
             $quiz = Quiz::find($insert->id);
             $data = array('qid' => $quiz->id, 'first_name' => $request->first_name);
-            Mail::send('email.acknowledgement', $data, function($message) use($request){
+            /*Mail::send('email.acknowledgement', $data, function($message) use($request){
                 $message->to($request->email, $request->first_name);
                 $message->from($this->settings->admin_email, $this->settings->admin_name);
                 $message->cc($this->settings->admin_email, $this->settings->admin_name);
                 $message->replyTo($this->settings->admin_email, $this->settings->admin_name);
                 $message->subject('Life Style Design Quiz - Report');                
                 //$message->priority(2);                
-            });            
+            });*/            
         }catch(Exception $e){
             throw $e;
         }
@@ -120,18 +120,19 @@ class QuizController extends Controller
     public function report($id)
     {
         $quiz = Quiz::find($id);    
+        $strength = DB::table('strength')->where('category', $quiz->category)->first();    
         $chart = "{
             type: 'bar',
             data: {
                 labels: ['Compassion', 'Innovation', 'Optimism', 'Vision', 'Diligence'],
                 datasets: [{
-                    label: 'Your Profile Breakdown', 
+                    label: '', 
                     data: [".$quiz->c_per.", ".$quiz->i_per.", ".$quiz->o_per.", ".$quiz->v_per.", ".$quiz->a_per."],
-                    backgroundColor: 'rgb(220, 118, 51)'
+                    backgroundColor: 'rgb(255, 204, 0)'
                 }]
             }
         }";
-        $pdf = PDF::loadView('report', ['quiz' => $quiz, 'chart' => $chart]);
+        $pdf = PDF::loadView('report', ['quiz' => $quiz, 'chart' => $chart, 'strength' => $strength]);
         return $pdf->stream('report.pdf', array("Attachment"=>0));
     }
 

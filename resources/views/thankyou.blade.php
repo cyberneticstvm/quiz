@@ -1,8 +1,8 @@
 <!--$quiz = Session::get('quiz');
   $strength = Session::get('strength');-->
 @php
-  $quiz = Session::get('quiz');
-  $strength = Session::get('strength');
+  $quiz = DB::table('quizzes')->find(1);
+  $strength = DB::table('strength')->where('category', $quiz->category)->first();
 @endphp
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +20,7 @@
 
   <style>
     .bg{
-      background: linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url("{{ public_path().'/assets/bgs/'.$strength->img_name }}");
+      background: linear-gradient(0deg, rgba(20, 22, 25, 0.7), rgba(13, 110, 253, 25%)), url("{{ public_path().'/assets/bgs/'.$strength->img_name }}");
       background-size: cover;
       background-repeat: no-repeat;
       font-family: 'Raleway', sans-serif;
