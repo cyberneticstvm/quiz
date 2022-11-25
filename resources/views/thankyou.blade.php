@@ -1,8 +1,8 @@
-<!--$quiz = Session::get('quiz');
-  $strength = Session::get('strength');-->
+<!--$quiz = DB::table('quizzes')->find(1);
+  $strength = DB::table('strength')->where('category', $quiz->category)->first();-->
 @php
-  $quiz = DB::table('quizzes')->find(1);
-  $strength = DB::table('strength')->where('category', $quiz->category)->first();
+  $quiz = Session::get('quiz');
+  $strength = Session::get('strength');
 @endphp
 <!DOCTYPE html>
 <html lang="en">
