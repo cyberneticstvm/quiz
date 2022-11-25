@@ -44,7 +44,7 @@
         height: 36%;
         margin-bottom: -3%;
     }
-    .table, ul{
+    .table{
         margin: 0 5%;
         width: 90%;
     }
@@ -72,6 +72,9 @@
         cursor: pointer;
         color: #fff;
         letter-spacing: 1px;
+    }
+    .page li{
+        width: 90%;
     }
   </style>
 </head>
