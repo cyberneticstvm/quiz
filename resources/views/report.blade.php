@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>Lifestyle Design Quiz Report</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -9,7 +9,7 @@
   <style>
     @font-face {
         font-family: 'text';
-        src: url("{{ storage_path('/fonts/Raleway-Regular.ttf') }}") format("truetype");
+        src: url("{{ storage_path('/fonts/Raleway-Light.ttf') }}") format("truetype");
     }
     @page {
         margin:0px;
@@ -27,7 +27,7 @@
     .page p{
         width: 90%;
         text-align: justify;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .br{
         page-break-after: always;
