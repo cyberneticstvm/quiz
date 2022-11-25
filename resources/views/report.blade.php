@@ -54,6 +54,7 @@
         color: #fff;
         padding: 2% 0;
         background-color: #D3D3D3;
+        font-family: 'text';
     }
   </style>
 </head>
@@ -77,10 +78,7 @@
         <div class="col page">
             <div class='head'>YOUR PROFILE BREAKDOWN</div>
             <img src="https://quickchart.io/chart?width=350&height=150&c={{ urlencode($chart) }}"/>
-            <div class='head mt-3'>YOUR FOCUS FOR GROWTH</div>
-            
-            <p>Does that sound right? Or is there something else?</p>
-            <p>Perhaps it is a combination of more than one?</p>
+            <div class='head mt-3'>YOUR FOCUS FOR GROWTH</div>         
         </div>
     </div>
     <div class="row page"><p>Based on your quiz responses, the area that matters most to you right now is…</p></div>
@@ -88,15 +86,19 @@
         <div class="col tbl">
             <table class="table">
                 <tr>
-                    <td class="head td">{{ $strength->outcome }}</td><td>&nbsp;</td>
-                    <td class="head td">{{ $strength->outcome }}</td>
+                    <td class="td">EDUCATIONAL DESIGN</td><td>&nbsp;</td>
+                    <td class="td">LIFESTYLE DESIGN</td>
                 </tr>
                 <tr><td colspan="3"><br><br></td></tr>
                 <tr>
-                    <td class="head td">{{ $strength->outcome }}</td><td>&nbsp;</td>
-                    <td class="head td">{{ $strength->outcome }}</td>
+                    <td class="td">LEADERSHIP + CULTURE</td><td>&nbsp;</td>
+                    <td class="td">MINDSET & GROWTH</td>
                 </tr>
             </table>
+        </div>
+        <div class="page">
+            <p>Does that sound right? Or is there something else?</p>
+            <p>Perhaps it is a combination of more than one?</p>
         </div>
     </div>
 </div>
