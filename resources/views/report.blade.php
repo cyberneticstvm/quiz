@@ -155,6 +155,14 @@
         </div>
         <div class="checkpoint"><img src="./assets/images/checkpoint.jpg" class="img-fluid"/></div>
     </div>
+    <div class="br"></div>
+    <div class="row">
+        <div class="col page">
+            <div class='head'>MEET ANDREW</div>
+            <p>Hey there,</p>
+            <p>Thanks for taking the quiz. I trust this report has helped you.</p>
+        </div>
+    </div>
 </div>
 </body>
 </html>
