@@ -46,7 +46,7 @@
             <h5 class='head'>YOUR STRENGTH PROFILE</h5>
             <div class="mb-3">Based on your responses in the quiz, your Strength Profile is:</div>
             <div class="text-center">
-                <h1 style="background-color: {{ $strength->bg_color }}; width: 30%; margin: 0 auto; border-radius: 25px; padding: 10px;">{{ $strength->outcome }}</h1>
+                <p class="head" style="background-color: {{ $strength->bg_color }}; width: 30%; margin: 0 auto; border-radius: 25px; padding: 10px;">{{ $strength->outcome }}</p>
             </div>
             <p class="desc">{!! $strength->description !!}</p>
         </div>
@@ -54,7 +54,7 @@
     <div class="br"></div>
     <div class="row">
         <div class="col page">
-            <h5 class='head'>YOUR PROFILE BREAKDOWN</h5>
+            <p class='head'>YOUR PROFILE BREAKDOWN</p>
             <img src="https://quickchart.io/chart?width=350&height=150&c={{ urlencode($chart) }}"/>
         </div>
     </div>
