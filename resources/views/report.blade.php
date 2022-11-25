@@ -52,6 +52,7 @@
         border-radius: 25px;
         text-align: center;
         color: #fff;
+        padding: 0 2%;
     }
   </style>
 </head>
