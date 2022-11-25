@@ -31,6 +31,7 @@
     }
     .head{
         font-family: 'text';
+        font-weight: bold;
     }
     .br{
         page-break-after: always;
@@ -43,10 +44,10 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col page">
-            <h5 class='head'>YOUR STRENGTH PROFILE</h5>
+            <p class='head'>YOUR STRENGTH PROFILE</p>
             <div class="mb-3">Based on your responses in the quiz, your Strength Profile is:</div>
             <div class="text-center">
-                <p class="head" style="background-color: {{ $strength->bg_color }}; width: 30%; margin: 0 auto; border-radius: 25px; padding: 10px;">{{ $strength->outcome }}</p>
+                <p class="head text-center" style="background-color: {{ $strength->bg_color }}; width: 30%; margin: 0 auto; border-radius: 25px; padding: 10px; color: #fff; ">{{ $strength->outcome }}</p>
             </div>
             <p class="desc">{!! $strength->description !!}</p>
         </div>
