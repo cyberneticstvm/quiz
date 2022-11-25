@@ -138,6 +138,7 @@
                 @empty
                 @endforelse
             </ul>
+            <div class="call"><a href="https://www.blueprintlifecoaching.com.au/coaching/let-s-talk" target="_blank">BOOK YOUR DISCOVERY CALL</a></div>
         </div>
     </div>
 </div>
