@@ -63,8 +63,8 @@
         padding: 20px 0 20px 0;
         background-color: #0070C0;
         font-family: 'text';
-        width: 90%;
-        margin-top: 5%;
+        width: 60%;
+        margin-top: 7%;
     }
     .call a{
         text-decoration: none;
