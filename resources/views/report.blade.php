@@ -77,11 +77,13 @@
     <div class="row">
         <div class="col page">
             <div class='head'>YOUR PROFILE BREAKDOWN</div>
-            <img src="https://quickchart.io/chart?width=350&height=150&c={{ urlencode($chart) }}"/>
-            <div class='head mt-3'>YOUR FOCUS FOR GROWTH</div>         
+            <img src="https://quickchart.io/chart?width=350&height=150&c={{ urlencode($chart) }}"/>                     
         </div>
     </div>
-    <div class="row page"><p>Based on your quiz responses, the area that matters most to you right now is…</p></div>
+    <div class="row page">
+        <div class='head mt-5'>YOUR FOCUS FOR GROWTH</div>
+        <p>Based on your quiz responses, the area that matters most to you right now is…</p>
+    </div>
     <div class="row">
         <div class="col tbl">
             <table class="table">
