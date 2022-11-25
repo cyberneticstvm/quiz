@@ -29,6 +29,9 @@
         text-align: justify;
         font-size: 1.2rem;
     }
+    h1, h5{
+        font-family: text;
+    }
     .br{
         page-break-after: always;
     }
