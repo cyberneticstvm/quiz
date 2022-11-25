@@ -46,6 +46,7 @@
     }
     .desc1{
         height: 50%;
+        margin-bottom: -3%;
     }
     .table{
         margin: 0 5%;
@@ -152,7 +153,7 @@
             <div class='head'>CHECKPOINT</div>
             <div class="desc1"><p>{!! $strength->description1 !!}</p></div>
         </div>
-        <div class="profile"><img src="./assets/images/checkpoint.jpg" class="img-fluid"/></div>
+        <div class="checkpoint"><img src="./assets/images/checkpoint.jpg" class="img-fluid"/></div>
     </div>
 </div>
 </body>
