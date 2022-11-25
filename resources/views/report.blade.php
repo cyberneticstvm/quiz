@@ -149,7 +149,7 @@
             <div class='head'>CHECKPOINT</div>
             <div class="desc"><p>{!! $strength->description1 !!}</p></div>
         </div>
-        <div class="profile"><img src="./assets/images/checkout.jpg" class="img-fluid"/></div>
+        <div class="profile"><img src="./assets/images/checkpoint.jpg" class="img-fluid"/></div>
     </div>
 </div>
 </body>
