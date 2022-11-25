@@ -64,11 +64,13 @@
         background-color: #0070C0;
         font-family: 'text';
         width: 90%;
+        margin-top: 15px;
     }
     .call a{
         text-decoration: none;
         cursor: pointer;
         color: #fff;
+        letter-spacing: 1px;
     }
   </style>
 </head>
