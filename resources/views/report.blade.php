@@ -31,7 +31,6 @@
     }
     .head p{        
         font-weight: bold;
-        font-family: 'text';
     }
     .br{
         page-break-after: always;
@@ -55,7 +54,7 @@
     <div class="br"></div>
     <div class="row">
         <div class="col page">
-        <div class="head"><p class='head'>YOUR PROFILE BREAKDOWN</p></div>
+            <div class="head"><p class='head'>YOUR PROFILE BREAKDOWN</p></div>
             <img src="https://quickchart.io/chart?width=350&height=150&c={{ urlencode($chart) }}"/>
         </div>
     </div>
