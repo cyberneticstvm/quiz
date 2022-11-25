@@ -60,7 +60,7 @@
         border-radius: 10%;
         text-align: center;
         color: #fff;
-        padding: 20px 0 20px 0;
+        padding: 15px 0 15px 0;
         background-color: #0070C0;
         font-family: 'text';
         width: 60%;
