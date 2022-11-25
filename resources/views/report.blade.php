@@ -56,6 +56,14 @@
         background-color: #D3D3D3;
         font-family: 'text';
     }
+    .call{
+        border-radius: 10%;
+        text-align: center;
+        color: #fff;
+        padding: 20px 0 20px 0;
+        background-color: #D3D3D3;
+        font-family: 'text';
+    }
   </style>
 </head>
 <body>
@@ -101,10 +109,7 @@
         <div class="page">
             <p>Does that sound right? Or is there something else?</p>
             <p>Perhaps it is a combination of more than one?</p>
-
-            <div class="text-center">
-                <div style="background-color: #00305B; color: #fff"><a href="">BOOK YOUR DISCOVERY CALL</a></div>
-            </div>
+            <div class="call"><a href="">BOOK YOUR DISCOVERY CALL</a></div>
         </div>
     </div>
 </div>
