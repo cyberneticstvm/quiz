@@ -67,18 +67,19 @@
             <div class='head'>YOUR PROFILE BREAKDOWN</div>
             <img src="https://quickchart.io/chart?width=350&height=150&c={{ urlencode($chart) }}"/>
             <div class='head mt-3'>YOUR FOCUS FOR GROWTH</div>
-            <p>Based on your quiz responses, the area that matters most to you right now is…</p>
-            <div class="row">
-                <div class="head col-md-6" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
-                <div class="head col-md-6" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
-            </div>
-            <div class="row">
-                <div class="head col-md-6" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
-                <div class="head col-md-6" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
-            </div>
+            
             <p>Does that sound right? Or is there something else?</p>
             <p>Perhaps it is a combination of more than one?</p>
         </div>
+    </div>
+    <div class="row page"><p>Based on your quiz responses, the area that matters most to you right now is…</p></div>
+    <div class="row">
+        <div class="head col-md-6" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
+        <div class="head col-md-6" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
+    </div>
+    <div class="row">
+        <div class="head col-md-6" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
+        <div class="head col-md-6" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
     </div>
 </div>
 </body>
