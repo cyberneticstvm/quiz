@@ -88,13 +88,13 @@
         <div class="col tbl">
             <table class="table">
                 <tr>
-                    <td class="td">EDUCATIONAL DESIGN</td><td>&nbsp;</td>
-                    <td class="td">LIFESTYLE DESIGN</td>
+                    <td class="td" style="background-color: {{ ($outcome->outcome == 'EDU') ? $strength->bg_color : '' }}">EDUCATIONAL DESIGN</td><td>&nbsp;</td>
+                    <td class="td" style="background-color: {{ ($outcome->outcome == 'LSD') ? $strength->bg_color : '' }}">LIFESTYLE DESIGN</td>
                 </tr>
                 <tr><td colspan="3"><br><br></td></tr>
                 <tr>
-                    <td class="td">LEADERSHIP + CULTURE</td><td>&nbsp;</td>
-                    <td class="td">MINDSET & GROWTH</td>
+                    <td class="td" style="background-color: {{ ($outcome->outcome == 'LAC') ? $strength->bg_color : '' }}">LEADERSHIP + CULTURE</td><td>&nbsp;</td>
+                    <td class="td" style="background-color: {{ ($outcome->outcome == 'MPD') ? $strength->bg_color : '' }}">MINDSET & GROWTH</td>
                 </tr>
             </table>
         </div>
