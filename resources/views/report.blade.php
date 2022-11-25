@@ -22,7 +22,7 @@
     }
     .page{
         margin: 5%;
-        font-family: 'text';
+        font-family: text;
     }
     .page p{
         width: 90%;
