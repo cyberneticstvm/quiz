@@ -127,7 +127,7 @@
             <div class='head'>CLARITY QUESTIONS</div>
             <p>Get deeper clarity on what your signature strength means to you and how you can apply it to reach your goals…</p>
             <ul>
-                @forelse($questions as => $question)
+                @forelse($questions as $key => $question)
                 {{ $question->question}}
                 @empty
                 @endforelse
