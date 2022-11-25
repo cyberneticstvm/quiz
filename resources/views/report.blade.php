@@ -65,6 +65,7 @@
         font-family: 'text';
         width: 60%;
         margin-top: 7%;
+        margin-left: 20%;
     }
     .call a{
         text-decoration: none;
