@@ -42,7 +42,7 @@
     }
     .desc{
         height: 36%;
-        margin-bottom: -5%;
+        margin-bottom: -3%;
     }
   </style>
 </head>
