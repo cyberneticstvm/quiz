@@ -44,10 +44,10 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col page">
-            <div class='head'>YOUR STRENGTH PROFILE</div>
+            <div class='head fw-bold'>YOUR STRENGTH PROFILE</div>
             <div class="mb-3">Based on your responses in the quiz, your Strength Profile is:</div>
             <div class="text-center">
-                <div class="head" style="background-color: {{ $strength->bg_color }}; width: 30%; margin: 0 auto; border-radius: 25px; padding: 10px; text-align: center;">{{ $strength->outcome }}</div>
+                <div class="head" style="background-color: {{ $strength->bg_color }}; width: 30%; margin: 0 auto; border-radius: 25px; padding: 10px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
             </div>
             <p class="desc">{!! $strength->description !!}</p>
         </div>
@@ -55,7 +55,7 @@
     <div class="br"></div>
     <div class="row">
         <div class="col page">
-        <div class='head'>YOUR PROFILE BREAKDOWN</div>
+        <div class='head fw-bold'>YOUR PROFILE BREAKDOWN</div>
             <img src="https://quickchart.io/chart?width=350&height=150&c={{ urlencode($chart) }}"/>
         </div>
     </div>
