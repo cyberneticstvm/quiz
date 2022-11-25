@@ -24,10 +24,13 @@
         margin: 5%;
         font-family: text;
     }
+    .head h5{
+        font-family: text;
+    }
     .page p{
         width: 90%;
         text-align: justify;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .br{
         page-break-after: always;
