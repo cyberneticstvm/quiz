@@ -24,11 +24,6 @@
         background-repeat: no-repeat;
         height: 100%;
     }
-    .profile{
-        background: url("./assets/images/profile.jpg");
-        background-repeat: no-repeat;
-        height: 10%;
-    }
     .page{
         margin: 5%;
         font-family: text;
@@ -60,7 +55,7 @@
             </div>
             <p class="desc">{!! $strength->description !!}</p>
         </div>
-        <div class="profile"></div>
+        <div class="profile"><img src="./assets/images/profile.jpg" class="img-fluid"/></div>
     </div>
     <div class="br"></div>
     <div class="row">
