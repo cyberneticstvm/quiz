@@ -24,7 +24,7 @@
         background-repeat: no-repeat;
         height: 100%;
     }
-    .cover{
+    .profile{
         background: url("./assets/images/profile.jpg");
         background-repeat: no-repeat;
         height: 100%;
