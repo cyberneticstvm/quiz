@@ -26,6 +26,7 @@
     }
     .head{
         font-family: text;
+        font-size: 1.5rem;
     }
     .page p{
         width: 90%;
