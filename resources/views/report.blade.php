@@ -74,8 +74,14 @@
     </div>
     <div class="row page"><p>Based on your quiz responses, the area that matters most to you right now is…</p></div>
     <div class="row">
-        <div class="head col-md-6" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
-        <div class="head col-md-6" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
+        <div class="col">
+            <table class="table">
+                <tr>
+                    <td class="head" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</td>
+                    <td class="head" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</td>
+                </tr>
+            </table>
+        </div>
     </div>
     <div class="row">
         <div class="head col-md-6" style="background-color: {{ $strength->bg_color }}; border-radius: 25px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
