@@ -64,7 +64,7 @@
         background-color: #0070C0;
         font-family: 'text';
         width: 60%;
-        margin-top: 7%;
+        margin-top: 5%;
         margin-left: 17%;
     }
     .call a{
@@ -128,7 +128,7 @@
     <div class="row">
         <div class="col page">
             <div class='head'>CLARITY QUESTIONS</div>
-            Get deeper clarity on what your signature strength means to you and how you can apply it to reach your goals…<br>
+            <p>Get deeper clarity on what your signature strength means to you and how you can apply it to reach your goals…</p>
             <ul>
                 @forelse($questions as $key => $question)
                 <li>{!! $question->question !!}</li>
