@@ -143,6 +143,14 @@
             <div class="call"><a href="https://www.blueprintlifecoaching.com.au/coaching/let-s-talk" target="_blank">BOOK YOUR DISCOVERY CALL</a></div>
         </div>
     </div>
+    <div class="br"></div>
+    <div class="row">
+        <div class="col page">
+            <div class='head'>CHECKPOINT</div>
+            <div class="desc"><p>{!! $strength->description1 !!}</p></div>
+        </div>
+        <div class="profile"><img src="./assets/images/checkout.jpg" class="img-fluid"/></div>
+    </div>
 </div>
 </body>
 </html>
