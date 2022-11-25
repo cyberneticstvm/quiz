@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Lifestyle Design Quiz Report</title>
+    <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,11 +27,7 @@
     .page p{
         width: 90%;
         text-align: justify;
-        font-size: 1.2rem;
-    }
-    .head p{        
-        font-weight: bold;
-        font-family: 'text';
+        font-size: 1.5rem;
     }
     .br{
         page-break-after: always;
@@ -43,19 +39,19 @@
 <img src="./assets/images/thankyou.jpg" class="img-fluid"/> 
 <div class="container-fluid">
     <div class="row">
-        <div class="col">
-            <div class='head'><p>YOUR STRENGTH PROFILE</p></div>
-            <div class="mb-3 page"><p>Based on your responses in the quiz, your Strength Profile is:</p></div>
+        <div class="col page">
+            <h5>YOUR STRENGTH PROFILE</h5>
+            <div class="mb-3">Based on your responses in the quiz, your Strength Profile is:</div>
             <div class="text-center">
-                <div class="head"><p class="text-center" style="background-color: {{ $strength->bg_color }}; width: 30%; margin: 0 auto; border-radius: 25px; padding: 10px; color: #fff; ">{{ $strength->outcome }}</p></div>
+                <h1 style="background-color: {{ $strength->bg_color }}; width: 30%; margin: 0 auto; border-radius: 25px; padding: 10px;">{{ $strength->outcome }}</h1>
             </div>
-            <div class="page"><p class="desc">{!! $strength->description !!}</p></div>
+            <p class="desc">{!! $strength->description !!}</p>
         </div>
     </div>
     <div class="br"></div>
     <div class="row">
-        <div class="col">
-            <div class="head"><p class='head'>YOUR PROFILE BREAKDOWN</p></div>
+        <div class="col page">
+            <h5>YOUR PROFILE BREAKDOWN</h5>
             <img src="https://quickchart.io/chart?width=350&height=150&c={{ urlencode($chart) }}"/>
         </div>
     </div>
