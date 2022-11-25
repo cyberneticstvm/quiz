@@ -29,7 +29,7 @@
         text-align: justify;
         font-size: 1.2rem;
     }
-    .head{
+    .head p{
         font-family: 'text';
         font-weight: bold;
     }
@@ -44,10 +44,10 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col page">
-            <p class='head'>YOUR STRENGTH PROFILE</p>
+            <div class='head'><p>YOUR STRENGTH PROFILE</p></div>
             <div class="mb-3">Based on your responses in the quiz, your Strength Profile is:</div>
             <div class="text-center">
-                <p class="head text-center" style="background-color: {{ $strength->bg_color }}; width: 30%; margin: 0 auto; border-radius: 25px; padding: 10px; color: #fff; ">{{ $strength->outcome }}</p>
+                <div class="head"><p class="text-center" style="background-color: {{ $strength->bg_color }}; width: 30%; margin: 0 auto; border-radius: 25px; padding: 10px; color: #fff; ">{{ $strength->outcome }}</p></div>
             </div>
             <p class="desc">{!! $strength->description !!}</p>
         </div>
@@ -55,7 +55,7 @@
     <div class="br"></div>
     <div class="row">
         <div class="col page">
-            <p class='head'>YOUR PROFILE BREAKDOWN</p>
+        <div class="head"><p class='head'>YOUR PROFILE BREAKDOWN</p></div>
             <img src="https://quickchart.io/chart?width=350&height=150&c={{ urlencode($chart) }}"/>
         </div>
     </div>
