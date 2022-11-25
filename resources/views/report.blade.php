@@ -53,7 +53,7 @@
         text-align: center;
         color: #fff;
         padding: 2% 0;
-        background-color: gray;
+        background-color: #D3D3D3;
     }
   </style>
 </head>
@@ -91,7 +91,7 @@
                     <td class="head td">{{ $strength->outcome }}</td><td>&nbsp;</td>
                     <td class="head td">{{ $strength->outcome }}</td>
                 </tr>
-                <tr><td colspan="3">&nbsp;</td></tr>
+                <tr><td colspan="3"><br><br></td></tr>
                 <tr>
                     <td class="head td">{{ $strength->outcome }}</td><td>&nbsp;</td>
                     <td class="head td">{{ $strength->outcome }}</td>
