@@ -27,7 +27,7 @@
     .profile{
         background: url("./assets/images/profile.jpg");
         background-repeat: no-repeat;
-        height: 100%;
+        height: 10%;
     }
     .page{
         margin: 5%;
