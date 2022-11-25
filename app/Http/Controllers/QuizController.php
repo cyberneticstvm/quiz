@@ -121,6 +121,8 @@ class QuizController extends Controller
     {
         $quiz = Quiz::find($id);    
         $strength = DB::table('strength')->where('category', $quiz->category)->first();    
+        $outcome = DB::table('outcomes')->where('category', $quiz->category)->where('outcome', $quiz->outcome)->first();    
+        $questions = DB::table('clarity_questions')->where('outcome', $outcome->id)->get();    
         $chart = "{
             type: 'bar',
             data: {
@@ -132,7 +134,7 @@ class QuizController extends Controller
                 }]
             }
         }";
-        $pdf = PDF::loadView('report', ['quiz' => $quiz, 'chart' => $chart, 'strength' => $strength]);
+        $pdf = PDF::loadView('report', ['quiz' => $quiz, 'chart' => $chart, 'strength' => $strength, 'outcome' => $outcome, 'questions' => $questions]);
         return $pdf->stream('report.pdf', array("Attachment"=>0));
     }
 
