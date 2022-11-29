@@ -12,7 +12,5 @@ So, thank you for being one of the ‘doers’, the ones willing to take positiv
 
 Now, let’s see what the results show!<br><br>
 
-<center><h3><a href="http://quiz.lifestyledesignquiz.com/quiz/report/{{$qid}}/" target="_blank">Download your Report</a></h3></center><br><br>
-
 Kind regards,<br>
 Andrew

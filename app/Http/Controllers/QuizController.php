@@ -98,20 +98,46 @@ class QuizController extends Controller
             $strength = DB::table('strength')->where('category', $quiz->category)->first();
             $outcome = DB::table('outcomes')->where('category', $quiz->category)->where('outcome', $quiz->outcome)->first();
             $questions = DB::table('clarity_questions')->where('outcome', $outcome->id)->get();
+            $rgb_c = DB::table('strength')->where('category', 'C')->value('rgb');
+            $rgb_i = DB::table('strength')->where('category', 'I')->value('rgb');
+            $rgb_o = DB::table('strength')->where('category', 'O')->value('rgb');
+            $rgb_v = DB::table('strength')->where('category', 'V')->value('rgb');
+            $rgb_a = DB::table('strength')->where('category', 'A')->value('rgb');
             $chart = "{
                 type: 'bar',
                 data: {
-                    labels: ['Compassion', 'Innovation', 'Optimism', 'Vision', 'Diligence'],
-                    datasets: [{
-                        label: '', 
-                        data: [".$quiz->c_per.", ".$quiz->i_per.", ".$quiz->o_per.", ".$quiz->v_per.", ".$quiz->a_per."],
-                        backgroundColor: 'rgb(255, 204, 0)'
-                    }]
+                    datasets: [
+                    {
+                        label: 'Compassion', 
+                        data: [".$quiz->c_per."],
+                        backgroundColor: 'rgb(".$rgb_c.")'
+                    },
+                    {
+                        label: 'Innovation', 
+                        data: [".$quiz->i_per."],
+                        backgroundColor: 'rgb(".$rgb_i.")'
+                    },
+                    {
+                        label: 'Optimism', 
+                        data: [".$quiz->o_per."],
+                        backgroundColor: 'rgb(".$rgb_o.")'
+                    },
+                    {
+                        label: 'Vision', 
+                        data: [".$quiz->v_per."],
+                        backgroundColor: 'rgb(".$rgb_v.")'
+                    },
+                    {
+                        label: 'Action', 
+                        data: [".$quiz->a_per."],
+                        backgroundColor: 'rgb(".$rgb_a.")'
+                    }
+                    ]
                 }
             }";
             $pdf = PDF::loadView('report', ['quiz' => $quiz, 'chart' => $chart, 'strength' => $strength, 'outcome' => $outcome, 'questions' => $questions]);
             $data = array('qid' => $quiz->id, 'first_name' => $request->first_name);
-            Mail::send('email.acknowledgement', $data, function($message) use($request, $pdf){
+            Mail::send('email.acknowledgement', $data, function($message) use ($request, $pdf){
                 $message->to($request->email, $request->first_name);
                 $message->from($this->settings->admin_email, $this->settings->admin_name);
                 $message->cc($this->settings->admin_email, $this->settings->admin_name);
@@ -136,16 +162,42 @@ class QuizController extends Controller
         $quiz = Quiz::find($id);    
         $strength = DB::table('strength')->where('category', $quiz->category)->first();    
         $outcome = DB::table('outcomes')->where('category', $quiz->category)->where('outcome', $quiz->outcome)->first();    
-        $questions = DB::table('clarity_questions')->where('outcome', $outcome->id)->get();    
+        $questions = DB::table('clarity_questions')->where('outcome', $outcome->id)->get(); 
+        $rgb_c = DB::table('strength')->where('category', 'C')->value('rgb');
+        $rgb_i = DB::table('strength')->where('category', 'I')->value('rgb');
+        $rgb_o = DB::table('strength')->where('category', 'O')->value('rgb');
+        $rgb_v = DB::table('strength')->where('category', 'V')->value('rgb');
+        $rgb_a = DB::table('strength')->where('category', 'A')->value('rgb');
         $chart = "{
             type: 'bar',
             data: {
-                labels: ['Compassion', 'Innovation', 'Optimism', 'Vision', 'Diligence'],
-                datasets: [{
-                    label: '', 
-                    data: [".$quiz->c_per.", ".$quiz->i_per.", ".$quiz->o_per.", ".$quiz->v_per.", ".$quiz->a_per."],
-                    backgroundColor: 'rgb(255, 204, 0)'
-                }]
+                datasets: [
+                {
+                    label: 'Compassion', 
+                    data: [".$quiz->c_per."],
+                    backgroundColor: 'rgb(".$rgb_c.")'
+                },
+                {
+                    label: 'Innovation', 
+                    data: [".$quiz->i_per."],
+                    backgroundColor: 'rgb(".$rgb_i.")'
+                },
+                {
+                    label: 'Optimism', 
+                    data: [".$quiz->o_per."],
+                    backgroundColor: 'rgb(".$rgb_o.")'
+                },
+                {
+                    label: 'Vision', 
+                    data: [".$quiz->v_per."],
+                    backgroundColor: 'rgb(".$rgb_v.")'
+                },
+                {
+                    label: 'Action', 
+                    data: [".$quiz->a_per."],
+                    backgroundColor: 'rgb(".$rgb_a.")'
+                }
+                ]
             }
         }";
         $pdf = PDF::loadView('report', ['quiz' => $quiz, 'chart' => $chart, 'strength' => $strength, 'outcome' => $outcome, 'questions' => $questions]);        
