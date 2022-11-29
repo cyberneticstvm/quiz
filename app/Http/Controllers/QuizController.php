@@ -108,6 +108,7 @@ class QuizController extends Controller
             throw $e;
         }
         $strength = DB::table('strength')->where('category', $quiz->category)->first();
+        $outcome = DB::table('outcomes')->where('category', $quiz->category)->where('outcome', $quiz->outcome)->first();
         return redirect()->route('quiz.thankyou')->with(['quiz' => $quiz, 'strength' => $strength]);        
     }
 

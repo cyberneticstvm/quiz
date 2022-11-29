@@ -37,6 +37,9 @@
         text-align: justify;
         font-size: 1.2rem;
     }
+    p.small, .page li{
+        font-size: 12px;
+    }
     .br{
         page-break-after: always;
     }
@@ -91,11 +94,11 @@
             <div class='head'>YOUR STRENGTH PROFILE</div>
             <div class="mb-3">Based on your responses in the quiz, your Strength Profile is:</div>
             <div class="text-center">
-                <div class="head" style="background-color: {{ $strength->bg_color }}; width: 30%; margin: 0 auto; border-radius: 25px; padding: 10px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
+                <div class="head" style="background-color: {{ $strength->bg_color }}; width: 30%; margin: 0 auto; border-radius: 30px; padding: 10px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
             </div>
             <div class="desc"><p>{!! $strength->description !!}</p></div>
         </div>
-        <div class="profile"><img src="./assets/images/profile.jpg" class="img-fluid"/></div>
+        <div class="profile"><img src="./assets/bgs/{{ $quiz->category.'.jpg' }}" class="img-fluid"/></div>
     </div>
     <div class="br"></div>
     <div class="row">
@@ -132,7 +135,8 @@
     <div class="row">
         <div class="col page">
             <div class='head'>CLARITY QUESTIONS</div>
-            Get deeper clarity on what your signature strength means to you and how you can apply it to <br>reach your goals…<br>
+            <p class="small">Get deeper clarity on what your signature strength means to you and how you can apply it to reach your goals…</p>
+            <p class="small">{{ $outcome->description }}</p>
             <ul>
                 @forelse($questions as $key => $question)
                 <li>{!! $question->question !!}</li>
@@ -166,7 +170,7 @@
             <p>You were told that if you studied hard, worked hard, and followed the status quo – then everything would turn out fine. You would be happy.</p>
             <p>Trouble is, YOU weren’t born to be ordinary.</p>
             <p>You were born to play a bigger game.</p>
-            <p>You <strong>cannot</strong> create happy, effective education, family life, work or business (or any worthwhile pursuit) unless you understand WHY you’re doing it. Your WHY come from WHO you are – on the inside – the deepest part of you.</p>
+            <p>You cannot create happy, effective education, family life, work or business (or any worthwhile pursuit) unless you understand WHY you’re doing it. Your WHY come from WHO you are – on the inside – the deepest part of you.</p>
             <p>This doesn’t come from following top-down, A-B-C instructions – it requires a personalised, strengths-based approach. It takes coaching.</p>
             <p>I’m a maverick educator, turned lifestyle design coach.</p>
             <p>I help people redesign their lives so they can learn, live and lead better – with passion and purpose. </p>
