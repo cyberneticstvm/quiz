@@ -21,6 +21,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
+      <div class="logo text-end"><img src="{{ public_path().'/assets/images/andrewlord-full-navy-blue.png' }}" class="img-fluid" width="15%" /></div>
       <div class="progress mt-3" style="height: 30px;">
         <div class="progress-bar progress-bar-success progress-bar-striped progress-bar-animated" style="font-weight:bold; font-size:15px;" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
@@ -80,7 +81,7 @@
               </div>
             </div>
             <div class="card-footer">
-              <button type='button' class="action back btn btn-sm btn-outline-warning" style="display: none">Back</button>
+              <button type='button' class="action back btn btn-sm btn-outline-secondary" style="display: none">Back</button>
               <button type='button' class="action next btn btn-sm btn-outline-secondary float-end">Next</button>
               <button type='submit' class="action submit btn btn-sm btn-outline-success float-end" style="display: none">Submit</button>
             </div>

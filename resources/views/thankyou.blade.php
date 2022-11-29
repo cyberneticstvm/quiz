@@ -1,8 +1,10 @@
 <!--$quiz = DB::table('quizzes')->find(1);
   $strength = DB::table('strength')->where('category', $quiz->category)->first();-->
 @php
-  $quiz = Session::get('quiz');
-  $strength = Session::get('strength');
+  //$quiz = Session::get('quiz');
+  //$strength = Session::get('strength');
+  $quiz = DB::table('quizzes')->find(1);
+  $strength = DB::table('strength')->where('category', $quiz->category)->first();
 @endphp
 <!DOCTYPE html>
 <html lang="en">
@@ -29,8 +31,11 @@
       color: #fff;
       line-height: 40px;
     }
-    .logo img, .fb img{
+    .fb img{
       width: 15%;
+    }
+    .logo img{
+      width: 30%;
     }
     h1{
       color: #fff;
@@ -46,6 +51,7 @@
       cursor: pointer !important;
       transition: 0.5s;
       padding: 5px;
+      border-radius: 25px;
     }
     .cbtn a{
       text-decoration: none;
@@ -64,7 +70,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12 text-center logo">
-      <img src="{{ public_path().'/assets/images/white-logo1.png' }}" class="img-fluid" />
+      <img src="{{ public_path().'/assets/images/andrewlord-full-blue.png' }}" class="img-fluid" />
     </div>
     <div class="col-12 text-center">
         <h3>Congratulations, you have completed the Lifestyle Design Quiz!<br/>
@@ -100,7 +106,7 @@
   <div class="row mb-5">
     <div class="col-lg-3"></div>
     <div class="col-lg-6 text-center cbtn">
-      <a href="https://www.blueprintlifecoaching.com.au/coaching/let-s-talk" target="_blank">BOOK A FREE LIFESTYLE DESIGN CALL</a>
+      <a href="https://www.blueprintlifecoaching.com.au/coaching/let-s-talk" target="_blank">BOOK A FREE CALL</a>
     </div>
     <div class="col-lg-3"></div>
   </div>
