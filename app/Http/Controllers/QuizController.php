@@ -95,20 +95,33 @@ class QuizController extends Controller
             $input['outcome'] =  array_search(max($outcome), $outcome);
             $insert = Quiz::create($input);
             $quiz = Quiz::find($insert->id);
+            $strength = DB::table('strength')->where('category', $quiz->category)->first();
+            $outcome = DB::table('outcomes')->where('category', $quiz->category)->where('outcome', $quiz->outcome)->first();
+            $questions = DB::table('clarity_questions')->where('outcome', $outcome->id)->get();
+            $chart = "{
+                type: 'bar',
+                data: {
+                    labels: ['Compassion', 'Innovation', 'Optimism', 'Vision', 'Diligence'],
+                    datasets: [{
+                        label: '', 
+                        data: [".$quiz->c_per.", ".$quiz->i_per.", ".$quiz->o_per.", ".$quiz->v_per.", ".$quiz->a_per."],
+                        backgroundColor: 'rgb(255, 204, 0)'
+                    }]
+                }
+            }";
+            $pdf = PDF::loadView('report', ['quiz' => $quiz, 'chart' => $chart, 'strength' => $strength, 'outcome' => $outcome, 'questions' => $questions]);
             $data = array('qid' => $quiz->id, 'first_name' => $request->first_name);
             Mail::send('email.acknowledgement', $data, function($message) use($request){
                 $message->to($request->email, $request->first_name);
                 $message->from($this->settings->admin_email, $this->settings->admin_name);
                 $message->cc($this->settings->admin_email, $this->settings->admin_name);
                 $message->replyTo($this->settings->admin_email, $this->settings->admin_name);
-                $message->subject('Life Style Design Quiz - Report');                
-                //$message->priority(2);                
-            });          
+                $message->subject('Life Style Design Quiz - Report');                               
+                $message->attachData($pdf->output(), "Report.pdf");                             
+            });       
         }catch(Exception $e){
             throw $e;
-        }
-        $strength = DB::table('strength')->where('category', $quiz->category)->first();
-        $outcome = DB::table('outcomes')->where('category', $quiz->category)->where('outcome', $quiz->outcome)->first();
+        }        
         return redirect()->route('quiz.thankyou')->with(['quiz' => $quiz, 'strength' => $strength]);        
     }
 
@@ -135,7 +148,7 @@ class QuizController extends Controller
                 }]
             }
         }";
-        $pdf = PDF::loadView('report', ['quiz' => $quiz, 'chart' => $chart, 'strength' => $strength, 'outcome' => $outcome, 'questions' => $questions]);
+        $pdf = PDF::loadView('report', ['quiz' => $quiz, 'chart' => $chart, 'strength' => $strength, 'outcome' => $outcome, 'questions' => $questions]);        
         return $pdf->stream('report.pdf', array("Attachment"=>0));
     }
 
