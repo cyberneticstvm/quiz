@@ -128,7 +128,7 @@ class QuizController extends Controller
                         backgroundColor: 'rgb(".$rgb_v.")'
                     },
                     {
-                        label: 'Action', 
+                        label: 'Diligence', 
                         data: [".$quiz->a_per."],
                         backgroundColor: 'rgb(".$rgb_a.")'
                     }
