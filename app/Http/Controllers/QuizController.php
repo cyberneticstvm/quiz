@@ -111,7 +111,7 @@ class QuizController extends Controller
             }";
             $pdf = PDF::loadView('report', ['quiz' => $quiz, 'chart' => $chart, 'strength' => $strength, 'outcome' => $outcome, 'questions' => $questions]);
             $data = array('qid' => $quiz->id, 'first_name' => $request->first_name);
-            Mail::send('email.acknowledgement', $data, function($message) use($request){
+            Mail::send('email.acknowledgement', $data, function($message) use($request, $pdf){
                 $message->to($request->email, $request->first_name);
                 $message->from($this->settings->admin_email, $this->settings->admin_name);
                 $message->cc($this->settings->admin_email, $this->settings->admin_name);
