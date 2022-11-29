@@ -87,7 +87,7 @@
   </div>
   <div class="row">
     <div class="col-lg-12 text-center fb">
-        <a href="https://www.facebook.com/sharer/sharer.php?u={{ 'http://quiz.lifestyledesignquiz/public/assets/bgs/'.$strength->img_name1 }}&t=LifestyleDesignQuiz" target="_blank"><img src="{{ public_path().'/assets/images/facebook-share-icon.png' }}" class="img-fluid" /></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ 'https://lifestyledesignquiz.com/projects/quiz/public/assets/bgs/'.$strength->img_name1 }}&t=LifestyleDesignQuiz" target="_blank"><img src="{{ public_path().'/assets/images/facebook-share-icon.png' }}" class="img-fluid" /></a>
     </div>
   </div>
   <div class="row">
