@@ -104,7 +104,7 @@ class QuizController extends Controller
             $rgb_v = DB::table('strength')->where('category', 'V')->value('rgb');
             $rgb_a = DB::table('strength')->where('category', 'A')->value('rgb');
             $chart = "{
-                type: 'pie',
+                type: 'bar',
                 data: {
                     datasets: [
                     {
@@ -169,7 +169,7 @@ class QuizController extends Controller
         $rgb_v = DB::table('strength')->where('category', 'V')->value('rgb');
         $rgb_a = DB::table('strength')->where('category', 'A')->value('rgb');
         $chart = "{
-            type: 'pie',
+            type: 'bar',
             data: {
                 datasets: [
                 {
