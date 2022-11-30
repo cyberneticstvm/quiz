@@ -44,6 +44,8 @@
     .desc p{
       font-size: 1.5rem;
       color: #fff;
+      width:80%;
+      margin: 0 auto;
     }
     .cbtn{
       background-color: #7FCCF7;
@@ -103,7 +105,7 @@
 				<p>Want to learn more about using your strength of <span style="color: {{ $strength->bg_color }}">{{ $strength->outcome }}</span> to improve your happiness, productivity and reach your goals?</p>
     </div>
   </div>
-  <div class="row mb-5">
+  <div class="row mt-5 mb-5">
     <div class="col-lg-3"></div>
     <div class="col-lg-6 text-center cbtn">
       <a href="https://www.blueprintlifecoaching.com.au/coaching/let-s-talk" target="_blank">BOOK A FREE CALL</a>

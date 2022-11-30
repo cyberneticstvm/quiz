@@ -20,7 +20,7 @@
         margin:0px;
     }
     .cover{
-        background: url("./assets/images/cover.jpg");
+        background: url("./assets/images/cover-new.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         height: 100%;
@@ -34,9 +34,14 @@
         font-size: 1.5rem;
     }
     .page p{
-        width: 90%;
+        width: 80%;
         text-align: justify;
-        font-size: 1.2rem;
+        font-size: 1rem;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .signature img{
+        margin-left: 5%;
     }
     p.small, .page li{
         font-size: 12px;
@@ -45,8 +50,8 @@
         page-break-after: always;
     }
     .desc{
-        height: 36%;
-        margin-bottom: -3%;
+        height: 33%;
+        margin-bottom: -6%;
     }
     .desc1{
         height: 57%;
@@ -74,6 +79,8 @@
         width: 60%;
         margin-top: 3%;
         margin-left: 17%;
+        bottom: 10;
+        position: fixed;
     }
     .call a{
         text-decoration: none;
@@ -83,6 +90,11 @@
     }
     .page li{
         width: 90%;
+    }
+    .solid{
+        width: 90%;
+        color: #000;
+        font-weight: bold;
     }
   </style>
 </head>
@@ -95,8 +107,10 @@
             <div class='head'>YOUR STRENGTH PROFILE</div>
             <div class="mb-3">Based on your responses in the quiz, your Strength Profile is:</div>
             <div class="text-center">
+                <br>    
                 <div class="head" style="background-color: {{ $strength->bg_color }}; width: 30%; margin: 0 auto; border-radius: 30px; padding: 10px; text-align: center; color: #fff;">{{ $strength->outcome }}</div>
-            </div>
+                <br>
+            </div>            
             <div class="desc"><p>{!! $strength->description !!}</p></div>
         </div>
         <div class="profile"><img src="./assets/bgs/{{ $quiz->category.'.jpg' }}" class="img-fluid"/></div>
@@ -142,9 +156,9 @@
                 @forelse($questions as $key => $question)
                 <li>{!! $question->question !!}</li>
                     @if($question->type != 'radio')
-                        ________________________________________________________________________________<br>
-                        ________________________________________________________________________________<br>
-                        ________________________________________________________________________________<br>
+                        <hr class='solid'>
+                        <hr class='solid'>
+                        <hr class='solid'>
                     @endif
                 @empty
                 @endforelse
@@ -171,11 +185,12 @@
             <p>You were told that if you studied hard, worked hard, and followed the status quo – then everything would turn out fine. You would be happy.</p>
             <p>Trouble is, YOU weren’t born to be ordinary.</p>
             <p>You were born to play a bigger game.</p>
-            <p>You cannot create happy, effective education, family life, work or business (or any worthwhile pursuit) unless you understand WHY you’re doing it. Your WHY come from WHO you are – on the inside – the deepest part of you.</p>
+            <p>You cannot create happy, effective education, family life, work or business (or any worthwhile pursuit) unless you understand WHY you’re doing it. Your WHY comes from WHO you are – on the inside – the deepest part of you.</p>
             <p>This doesn’t come from following top-down, A-B-C instructions – it requires a personalised, strengths-based approach. It takes coaching.</p>
             <p>I’m a maverick educator, turned lifestyle design coach.</p>
             <p>I help people redesign their lives so they can learn, live and lead better – with passion and purpose. </p>
             <p>I want to help you too.</p>
+            <div class="signature"><img src="./assets/images/signature.jpg" width="100" class="img-fluid" /></div>
             <div class="call"><a href="https://www.blueprintlifecoaching.com.au/coaching/let-s-talk" target="_blank">BOOK YOUR DISCOVERY CALL</a></div>
         </div>
     </div>
