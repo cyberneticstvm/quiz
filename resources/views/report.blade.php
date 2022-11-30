@@ -50,7 +50,7 @@
         page-break-after: always;
     }
     .desc{
-        height: 33%;
+        height: 32%;
         margin-bottom: -3%;
     }
     .desc1{
