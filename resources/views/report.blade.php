@@ -51,7 +51,7 @@
     }
     .desc{
         height: 33%;
-        margin-bottom: -5%;
+        margin-bottom: -3%;
     }
     .desc1{
         height: 57%;
