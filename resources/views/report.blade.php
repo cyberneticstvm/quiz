@@ -20,9 +20,12 @@
         margin:0px;
     }
     .cover{
-        background: url("./assets/images/cover-new.jpg");
+        /*background: url("./assets/images/cover-high-res.jpg");*/
         background-size: cover;
         background-repeat: no-repeat;
+        height: 100%;
+    }
+    .cover img{
         height: 100%;
     }
     .page{
@@ -36,7 +39,7 @@
     .page p{
         width: 80%;
         text-align: justify;
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-left: 5%;
         margin-right: 5%;
     }
@@ -110,7 +113,10 @@
   </style>
 </head>
 <body>
-<div class="cover"></div>
+<!--<div class="cover"></div>-->
+<div class="cover">
+    <img src="./assets/images/cover-high-res.jpg" class="img-fluid" />
+</div>
 <img src="./assets/images/thankyou.jpg" class="img-fluid"/> 
 <div class="container-fluid">
     <div class="row">
@@ -182,7 +188,7 @@
                 @empty
                 @endforelse
             </ul>
-            <div class="call"><a href="https://www.blueprintlifecoaching.com.au/coaching/let-s-talk" target="_blank">BOOK YOUR DISCOVERY CALL</a></div>
+            <div class="call1"><a href="https://www.blueprintlifecoaching.com.au/bookings-checkout/let-s-talk-life/book" target="_blank">BOOK YOUR DISCOVERY CALL</a></div>
         </div>
     </div>
     <div class="br"></div>
@@ -210,7 +216,7 @@
             <p>I help people redesign their lives so they can learn, live and lead better – with passion and purpose. </p>
             <p>I want to help you too.</p>
             <div class="signature"><img src="./assets/images/signature.jpg" width="100" class="img-fluid" /></div>
-            <div class="call1"><a href="https://www.blueprintlifecoaching.com.au/coaching/let-s-talk" target="_blank">BOOK YOUR DISCOVERY CALL</a></div>
+            <div class="call1"><a href="https://www.blueprintlifecoaching.com.au/bookings-checkout/let-s-talk-life/book" target="_blank">BOOK YOUR DISCOVERY CALL</a></div>
         </div>
     </div>
 </div>
