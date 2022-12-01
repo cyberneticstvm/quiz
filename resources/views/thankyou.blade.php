@@ -108,7 +108,7 @@
   <div class="row mt-5 mb-5">
     <div class="col-lg-3"></div>
     <div class="col-lg-6 text-center cbtn">
-      <a href="https://www.blueprintlifecoaching.com.au/coaching/let-s-talk" target="_blank">BOOK A FREE CALL</a>
+      <a href="https://www.blueprintlifecoaching.com.au/bookings-checkout/let-s-talk-life/book" target="_blank">BOOK A FREE CALL</a>
     </div>
     <div class="col-lg-3"></div>
   </div>

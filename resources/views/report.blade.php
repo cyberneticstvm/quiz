@@ -202,7 +202,6 @@
     <div class="br"></div>
     <div class="row">
         <div class="col page">
-            <div class='head'>MEET ANDREW</div>
             <p>Hey {{ $quiz->first_name }},</p>
             <p>Thanks for taking the quiz. I trust this report has helped you.</p>
             <p>The reason you’re here is because the traditional way of doing things has let you down – whether that be education, lifestyle or trying to make a positive difference – the old way hasn’t worked.</p>
