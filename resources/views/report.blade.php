@@ -117,9 +117,17 @@
     </div>
     <div class="br"></div>
     <div class="row">
-        <div class="col page">
+        <div class="col-md-12 page">
             <div class='head'>YOUR PROFILE BREAKDOWN</div>
+            <br>
             <img src="https://quickchart.io/chart?width=350&height=150&c={{ urlencode($chart) }}"/>                     
+        </div>        
+        <div class="col-md-12 page text-center">
+            <span style="height: 10px; background-color: #ff0066">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;Compassion&nbsp;&nbsp;&nbsp;&nbsp;                 
+            <span style="height: 10px; background-color: #f79109">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;Innovation&nbsp;&nbsp;&nbsp;&nbsp;                   
+            <span style="height: 10px; background-color: #ffcc00">&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;Optimism&nbsp;&nbsp;&nbsp;&nbsp;                   
+            <span style="height: 10px; background-color: #a8d18d">&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;Vision&nbsp;&nbsp;&nbsp;&nbsp;                   
+            <span style="height: 10px; background-color: #4472c8">&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;Diligence
         </div>
     </div>
     <div class="row page">

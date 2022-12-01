@@ -133,7 +133,16 @@ class QuizController extends Controller
                         backgroundColor: 'rgb(".$rgb_a.")'
                     }
                     ]
-                }
+                },
+                options: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: false,
+                        text: 'Your Profile Breakdown',
+                    },
+                },
             }";
             $pdf = PDF::loadView('report', ['quiz' => $quiz, 'chart' => $chart, 'strength' => $strength, 'outcome' => $outcome, 'questions' => $questions]);
             $data = array('qid' => $quiz->id, 'first_name' => $request->first_name);
@@ -193,12 +202,21 @@ class QuizController extends Controller
                     backgroundColor: 'rgb(".$rgb_v.")'
                 },
                 {
-                    label: 'Action', 
+                    label: 'Diligence', 
                     data: [".$quiz->a_per."],
                     backgroundColor: 'rgb(".$rgb_a.")'
                 }
                 ]
-            }
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: false,
+                    text: 'Your Profile Breakdown',
+                },
+            },
         }";
         $pdf = PDF::loadView('report', ['quiz' => $quiz, 'chart' => $chart, 'strength' => $strength, 'outcome' => $outcome, 'questions' => $questions]);        
         return $pdf->stream('report.pdf', array("Attachment"=>0));
