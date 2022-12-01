@@ -82,7 +82,18 @@
         bottom: 10;
         position: fixed;
     }
-    .call a{
+    .call1{
+        border-radius: 10%;
+        text-align: center;
+        color: #fff;
+        padding: 15px 0 15px 0;
+        background-color: #0070C0;
+        font-family: 'text';
+        width: 60%;
+        margin-top: 10%;
+        margin-left: 17%;
+    }
+    .call a, .call1 a{
         text-decoration: none;
         cursor: pointer;
         color: #fff;
@@ -151,7 +162,7 @@
         <div class="page">
             <p>Does that sound right? Or is there something else?</p>
             <p>Perhaps it is a combination of more than one?</p>
-            <div class="call"><a href="https://www.blueprintlifecoaching.com.au/coaching/let-s-talk" target="_blank">BOOK YOUR DISCOVERY CALL</a></div>
+            <!--<div class="call"><a href="https://www.blueprintlifecoaching.com.au/coaching/let-s-talk" target="_blank">BOOK YOUR DISCOVERY CALL</a></div>-->
         </div>
     </div>
     <div class="br"></div>
@@ -199,7 +210,7 @@
             <p>I help people redesign their lives so they can learn, live and lead better – with passion and purpose. </p>
             <p>I want to help you too.</p>
             <div class="signature"><img src="./assets/images/signature.jpg" width="100" class="img-fluid" /></div>
-            <div class="call"><a href="https://www.blueprintlifecoaching.com.au/coaching/let-s-talk" target="_blank">BOOK YOUR DISCOVERY CALL</a></div>
+            <div class="call1"><a href="https://www.blueprintlifecoaching.com.au/coaching/let-s-talk" target="_blank">BOOK YOUR DISCOVERY CALL</a></div>
         </div>
     </div>
 </div>
