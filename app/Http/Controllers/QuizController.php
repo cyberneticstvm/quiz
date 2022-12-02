@@ -103,6 +103,7 @@ class QuizController extends Controller
             $rgb_o = DB::table('strength')->where('category', 'O')->value('rgb');
             $rgb_v = DB::table('strength')->where('category', 'V')->value('rgb');
             $rgb_a = DB::table('strength')->where('category', 'A')->value('rgb');
+            $score = implode('', $quiz->q18);
             $chart = "{
                 type: 'bar',
                 data: {
@@ -153,6 +154,17 @@ class QuizController extends Controller
                 $message->replyTo($this->settings->admin_email, $this->settings->admin_name);
                 $message->subject('Life Style Design Quiz - Report');                               
                 $message->attachData($pdf->output(), "Report.pdf");                             
+            });
+            $data1 = array('first_name' => $quiz->first_name, 'email' => $quiz->email, 'strength' => $strength->outcome, 'ffg' => $outcome->label, 'score' => $score);
+            Mail::send('email.output', $data1, function($message) use ($request){
+                if($score >= 7):
+                    $message->to($this->settings->gt_seven, 'Cybernetics');
+                else:
+                    $message->to($this->settings->lt_seven, 'Cybernetics');
+                endif;
+                $message->from($this->settings->admin_email, $this->settings->admin_name);
+                $message->replyTo('andrew@blueprintlifecoaching.com.au', 'Information');
+                $message->subject('LSD quiz submission');                                                          
             });       
         }catch(Exception $e){
             throw $e;
