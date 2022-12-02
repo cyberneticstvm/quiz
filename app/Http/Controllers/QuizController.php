@@ -156,7 +156,7 @@ class QuizController extends Controller
                 $message->attachData($pdf->output(), "Report.pdf");                             
             });
             $data1 = array('first_name' => $quiz->first_name, 'email' => $quiz->email, 'strength' => $strength->outcome, 'ffg' => $outcome->label, 'score' => $score);
-            Mail::send('email.output', $data1, function($message) use ($request){
+            Mail::send('email.output', $data1, function($message) use ($request, $score){
                 if($score >= 7):
                     $message->to($this->settings->gt_seven, 'Cybernetics');
                 else:
