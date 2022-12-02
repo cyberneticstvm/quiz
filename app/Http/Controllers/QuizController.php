@@ -150,20 +150,20 @@ class QuizController extends Controller
             Mail::send('email.acknowledgement', $data, function($message) use ($request, $pdf){
                 $message->to($request->email, $request->first_name);
                 $message->from($this->settings->admin_email, $this->settings->admin_name);
-                $message->cc($this->settings->admin_email, $this->settings->admin_name);
-                $message->replyTo($this->settings->admin_email, $this->settings->admin_name);
+                $message->cc($this->settings->cc_email, $this->settings->cc_name);
+                $message->replyTo($this->settings->cc_email, $this->settings->cc_name);
                 $message->subject('Life Style Design Quiz - Report');                               
                 $message->attachData($pdf->output(), "Report.pdf");                             
             });
             $data1 = array('first_name' => $quiz->first_name, 'email' => $quiz->email, 'strength' => $strength->outcome, 'ffg' => $outcome->label, 'score' => $score);
             Mail::send('email.output', $data1, function($message) use ($request, $score){
                 if($score >= 7):
-                    $message->to($this->settings->gt_seven, 'Cybernetics');
+                    $message->to($this->settings->gt_seven, 'Zapier');
                 else:
-                    $message->to($this->settings->lt_seven, 'Cybernetics');
+                    $message->to($this->settings->lt_seven, 'Zapier');
                 endif;
                 $message->from($this->settings->admin_email, $this->settings->admin_name);
-                $message->replyTo('andrew@blueprintlifecoaching.com.au', 'Information');
+                $message->replyTo($this->settings->cc_email, $this->settings->cc_name);
                 $message->subject('LSD quiz submission');                                                          
             });       
         }catch(Exception $e){

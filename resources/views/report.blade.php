@@ -110,6 +110,14 @@
         color: #000;
         font-weight: bold;
     }
+    .chkpoint img{
+        right: 60;
+        top: 10;
+        position: fixed;
+    }
+    .chkpoint{
+        margin-top: 3%;
+    }
   </style>
 </head>
 <body>
@@ -194,10 +202,10 @@
     <div class="br"></div>
     <div class="row">
         <div class="col page">
-            <div class='head'>CHECKPOINT</div>
-            <div class="desc1"><p>{!! $strength->description1 !!}</p></div>
+            <div class='chkpoint'><img src="./assets/bgs/{{ $strength->img_name2 }}" class="img-fluid" width="20%" /></div>
+            <div class="desc1 chkpoint"><p>{!! $strength->description1 !!}</p></div>
         </div>
-        <div class="checkpoint"><img src="./assets/images/checkpoint.jpg" class="img-fluid"/></div>
+        <div class="checkpoint"><img src="./assets/images/checkpoint.jpg" class="img-fluid" /></div>
     </div>
     <div class="br"></div>
     <div class="row">
