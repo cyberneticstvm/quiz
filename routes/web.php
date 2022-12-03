@@ -22,3 +22,6 @@ Route::get('/thankyou/', function () {
 })->name('quiz.thankyou');
 
 Route::get('/quiz/report/{id}/', [QuizController::class, 'report'])->name('quiz.report');
+Route::get('/acknowledge/', function(){
+    return view('email.acknowledgement');
+});
