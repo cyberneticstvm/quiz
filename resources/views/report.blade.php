@@ -45,6 +45,7 @@
     }
     .signature img{
         margin-left: 5%;
+        width: 35%;
     }
     p.small, .page li{
         font-size: 12px;
