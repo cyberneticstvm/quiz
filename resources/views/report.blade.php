@@ -222,7 +222,8 @@
             <p>I’m a maverick educator, turned lifestyle design coach.</p>
             <p>I help people redesign their lives so they can learn, live and lead better – with passion and purpose. </p>
             <p>I want to help you too.</p><br>
-            <div class="text-center"><a href="https://www.blueprintlifeacademy.com.au/" target="_blank"><img src="./assets/images/signature-banner-small.png" width="450" class="img-fluid" /></a></div>
+            <!--<div class="text-center"><a href="https://www.blueprintlifeacademy.com.au/" target="_blank"><img src="./assets/images/signature-banner-small.png" width="450" class="img-fluid" /></a></div>-->
+            <div class="signature"><img src="./assets/images/signature.jpg" class="img-fluid" /></div>
             <div class="call1"><a href="https://www.blueprintlifecoaching.com.au/bookings-checkout/let-s-talk-life/book" target="_blank">BOOK YOUR DISCOVERY CALL</a></div>
         </div>
     </div>

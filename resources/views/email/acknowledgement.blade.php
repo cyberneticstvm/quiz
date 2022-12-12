@@ -14,4 +14,4 @@ Now, let’s see what the results show!<br><br>
 
 Kind regards,<br>
 <img src="https://lifestyledesignquiz.com/projects/quiz/public/assets/images/signature.jpg" width="100" /><br><br>
-<img src="https://lifestyledesignquiz.com/projects/quiz/public/assets/images/andrewlord-full-navy-blue.png" width="15%"/>
+<img src="https://lifestyledesignquiz.com/projects/quiz/public/assets/images/andrewlord-full-navy-blue.png" width="35%"/>
