@@ -30,7 +30,7 @@
         <form method="post" action="{{ route('quiz.save') }}">
           @csrf
           <div class="card mt-3">
-            <div class="card-header font-weight-bold">Life Style Design Quiz1</div>
+            <div class="card-header font-weight-bold">Life Style Design Quiz</div>
 
             @forelse($questions as $key => $question)
             <div class="card-body p-5 step" style="{{ ($key != 0) ? 'display: none' : '' }}" id="{{ $question->qcode }}" data-number="{{ $question->id }}" data-input="{{ $question->input }}">
